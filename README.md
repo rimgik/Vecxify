@@ -81,7 +81,6 @@ BigInt factorial(const long long& n) {
 }
 
 int main() {
-    UnitTest();
     std::cout << "Result: " << factorial(50) << std::endl;
 }
 ```
