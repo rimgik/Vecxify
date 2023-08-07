@@ -77,22 +77,26 @@ Transpose of matrix m:
 [1.2, 7.3]
 [3.4, 8]
 ```
-#### Factorial with BigInt
+#### Factorial with BigInt and ModNum
 ```cpp
 #include <iostream>
 #include "vecxify.hpp"
 
 using namespace vecxify;
 
-BigInt factorial(const long long& n) {
-    if (n <= 1) return BigInt(1ll);
-    return BigInt(n) * factorial(n - 1);
+template <typename T>
+T factorial(const long long& n) {
+    if (n <= 1) return T(1ll);
+    return T(n) * factorial<T>(n - 1);
 }
 
 int main() {
-    std::cout << "Result: " << factorial(50) << std::endl;
+    std::cout << "fac(50)          : " << factorial<BigInt>(50) << std::endl;
+    std::cout << "fac(50) mod 1e9+7: " << factorial<ModNum<long long, 1000000007>>(50);
 }
+
 ```
 ```
-Result: 30414093201713378043612608166064768844377641568960512000000000000
+fac(50)          : 30414093201713378043612608166064768844377641568960512000000000000
+fac(50) mod 1e9+7: 318608048
 ```
