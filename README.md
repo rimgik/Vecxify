@@ -19,6 +19,9 @@ Vecxify is a generic C++ math library
 # Example 
 #### Large fibonacci number with matrix exponentiation
 ```cpp
+#include <iostream>
+#include "vecxify.hpp"
+
 using namespace vecxify;
 
 Mat<BigInt, 2, 2> binary_power(Mat<BigInt, 2, 2> base, const int& exp) {
@@ -46,6 +49,9 @@ int main() {
 ```
 #### Determinant, Transpose, Identity
 ```cpp
+#include <iostream>
+#include "vecxify.hpp"
+
 using namespace vecxify;
 
 int main() {
@@ -73,6 +79,9 @@ Transpose of matrix m:
 ```
 #### Factorial with BigInt
 ```cpp
+#include <iostream>
+#include "vecxify.hpp"
+
 using namespace vecxify;
 
 BigInt factorial(const long long& n) {
