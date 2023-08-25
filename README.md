@@ -59,7 +59,7 @@ int main() {
     std::cout << "Matrix m is: \n"           << m              << "\n\n";
     std::cout << "2x2 identity matrix\n"     << identity(m)    << "\n\n";
     std::cout << "Determinant of matrix m: " << determinant(m) << "\n\n";
-    std::cout << "Transpose of matrix m: \n" << transpose(m)   << '\n';
+    std::cout << "Transpose of matrix m: \n" << transpose(m)   << '\n'  ;
 }
 ```
 ```
